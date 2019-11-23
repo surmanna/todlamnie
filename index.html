@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<title>Moje Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  @font-face {
+    font-family: hand;
+    src: url("./fonts/font.ttf");
+  }
+
+  .typograf {
+    font-family: hand;
+    font-size: 1.4em;
+    font-weight: bold;
+
+    margin-left: -120%;
+    filter: blur(5px);
+    animation: typograf-fade-in 1.5s linear forwards;
+  }
+
+  .typograf-logo {
+    font-size: 3em !important;
+    font-weight: bold;
+  }
+
+  @keyframes typograf-fade-in {
+    from {
+      margin-left: -120%;
+      filter: blur(5px);
+    }
+    to {
+      margin-left: 0;
+      filter: blur(0);
+    }
+  }
+
+  body,
+  h1 {
+    font-family: "Montserrat", sans-serif
+  }
+
+  img {
+    height: 100% !important;
+    transition: all .15s;
+    filter: blur(2px);
+  }
+
+  img:hover {
+    transform: scale(1.1);
+    filter: blur(0);
+  }
+
+  .w3-third div{
+    overflow: hidden;
+  }
+
+  footer i {
+    padding: 10px 30px;
+    font-size: 1.5em !important;
+    cursor: pointer;
+  }
+</style>
+
+<body>
+
+  <!-- Sidebar -->
+  <nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()"
+      class="w3-button w3-black w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
+      <i class="fa fa-remove"></i>
+    </a>
+    <div class="w3-bar-block w3-center">
+      <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">About</a>
+      <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Photos</a>
+      <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Shop</a>
+      <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Contact</a>
+    </div>
+  </nav>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-content" style="max-width:1500px">
+
+    <!-- Header -->
+    <div class="w3-opacity">
+      <span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+      <div class="w3-clear"></div>
+      <header class="w3-center w3-margin-bottom">
+        <h1 class="typograf-logo">PHOTOLIO</h1>
+        <p class="typograf">Anna Surma</p>
+        <p class="w3-padding-16"><button class="w3-button w3-black" onclick="myFunction()">Toggle Grid Padding</button>
+        </p>
+      </header>
+    </div>
+
+    <!-- Photo Grid -->
+    <div class="w3-row" id="myGrid" style="margin-bottom:128px">
+      <div class="w3-third">
+        <div><img src="./images/2.jpg" style="width:100%"></div>
+        <div><img src="./images/2.jpg" style="width:100%"></div>
+        <div><img src="./images/3.jpg" style="width:100%"></div>
+        <div><img src="./images/74956741_117214896385895_3888036509256777728_o.jpg" style="width:100%"></div>
+        <div><img src="./images/ja.jpg" style="width:100%"></div>
+        <div><img src="./images/76759973_124872232286828_6651670174061559808_o.jpg" style="width:100%"></div>
+        <!-- nie ma zdjecia-->
+      </div>
+
+      <div class="w3-third">
+        <div><img src="./images/74286082_119731332800918_7636564419085860864_o.jpg" style="width:100%"></div>
+        <div><img src="./images/74332269_124872292286822_6938457252223254528_o.jpg" style="width:100%"></div>
+        <div><img src="./images/74674497_124873762286675_5027828135630995456_o.jpg" style="width:100%"></div>
+        <div><img src="./images/4.jpg" style="width:100%"></div>
+        <div><img src="./images/75204566_117196563054395_8388638889404792832_o.jpg" style="width:100%"></div>
+      </div>
+
+      <div class="w3-third">
+        <div><img src="./images/75481869_124872395620145_5129274429938860032_o.jpg" style="width:100%"></div>
+        <div><img src="./images/75521870_117175736389811_1361899671038984192_o.jpg" style="width:100%"></div>
+        <div><img src="./images/75580472_119712822802769_5425406257425022976_o.jpg" style="width:100%"></div>
+        <div><img src="./images/76759973_124872232286828_6651670174061559808_o.jpg" style="width:100%"></div>
+        <div><img src="./images/78151583_124873412286710_3687566157641940992_o.jpg" style="width:100%"></div>
+        <div><img src="./images/75311715_124872272286824_5372233132076433408_o.jpg" style="width:100%"></div> <!-- nie ma zdjęcia-->
+      </div>
+    </div>
+
+    <!-- End Page Content -->
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>john@example.com</td>
+          </tr>
+          <tr>
+            <td>Mary</td>
+            <td>Moe</td>
+            <td>mary@example.com</td>
+          </tr>
+          <tr>
+            <td>July</td>
+            <td>Dooley</td>
+            <td>july@example.com</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
+        class="w3-hover-text-green">w3.css</a></p>
+  </footer>
+
+  <script>
+    // Toggle grid padding
+    function myFunction() {
+      var x = document.getElementById("myGrid");
+      if (x.className === "w3-row") {
+        x.className = "w3-row-padding";
+      } else {
+        x.className = x.className.replace("w3-row-padding", "w3-row");
+      }
+    }
+
+    // Open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.width = "100%";
+      document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+
+    document.addEventListener("keypress", e => {
+      console.log(e.key)
+    })
+  </script>
+
+</body>
+
+</html>
